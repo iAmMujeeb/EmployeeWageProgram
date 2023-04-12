@@ -7,7 +7,6 @@ public class EmployeeWage {
         int cond = (int) (Math.random() * 10) % 3;
         return cond;
     }
-
     static int wageCalculation() {
         int dailyWage = 0;
         int totalHour=0;
@@ -59,11 +58,9 @@ public class EmployeeWage {
         }
         return temp1;
     }
-
     static final int WAGE_PER_HOUR = 20;
     static final int FULL_TIME_HOUR = 8;
     static final int PART_TIME_HOUR = 4;
-
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage Computation Program");
         totalWage = wageCalculation();
