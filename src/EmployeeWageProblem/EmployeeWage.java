@@ -1,15 +1,19 @@
-public class EmployeeWage {
-    static final int WAGE_PER_HOUR = 20;
-    static final int FULL_TIME_HOUR = 8;
-    static final int PART_TIME_HOUR = 4;
+package EmployeeWageProblem;
 
-    public static void main(String[] args) {
-        int totalWage = 0;
+public class EmployeeWage {
+    static int totalWage = 0;
+
+    static int condition() {
+        int cond = (int) (Math.random() * 10) % 3;
+        return cond;
+    }
+
+    static int wageCalculation() {
         int dailyWage = 0;
         int temp = 0;
-        System.out.println("Welcome to Employee Wage Computation Program");
+        int temp1 = 0;
         for (int i = 1; i <= 20; i++) {
-            int empCheck = (int) (Math.random() * 10) % 3;
+            int empCheck = condition();
             switch (empCheck) {
                 case 2:
                     dailyWage = WAGE_PER_HOUR * FULL_TIME_HOUR;
@@ -25,10 +29,19 @@ public class EmployeeWage {
             System.out.println("Daily wage => " + dailyWage);
             if (empCheck != 0) {
                 temp = temp + dailyWage;
-                totalWage = temp;
+                temp1 = temp;
             }
-            System.out.println("Monthly wage => " + totalWage);
-
         }
+        return temp1;
+    }
+
+    static final int WAGE_PER_HOUR = 20;
+    static final int FULL_TIME_HOUR = 8;
+    static final int PART_TIME_HOUR = 4;
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Employee Wage Computation Program");
+        totalWage = wageCalculation();
+        System.out.println("Monthly wage => " + totalWage);
     }
 }
