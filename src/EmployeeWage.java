@@ -1,4 +1,4 @@
-package EmployeeWageProblem;
+import java.util.Scanner;
 
 public class EmployeeWage {
     static int totalWage = 0;
