@@ -1,5 +1,3 @@
-package EmployeeWageProblem;
-
 public class EmployeeWage {
     static int totalWage = 0;
 
