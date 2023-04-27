@@ -1,6 +1,10 @@
 package EmployeeWageProblem;
 
+import java.util.ArrayList;
+
 public class CompanyEmpWage {
+
+    ArrayList<Integer> companyTotalWage = new ArrayList<>();
 
     int totalWage;
     final int WAGE_PER_HOUR = 20;
@@ -35,13 +39,13 @@ public class CompanyEmpWage {
                 totalWage = temp;
             }
         }
-
+        companyTotalWage.add(totalWage);
     }
 
     @Override
     public String toString() {
-        return "CompanyEmpWage{" +
-                "totalWage=" + totalWage +
+        return "Company{" +
+                "companyTotalWage=" + companyTotalWage +
                 '}';
     }
 }
