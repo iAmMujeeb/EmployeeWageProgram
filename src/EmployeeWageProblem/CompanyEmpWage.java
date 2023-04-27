@@ -34,7 +34,6 @@ public class CompanyEmpWage {
                 default:
                     System.out.println("Employee is Absent!");
             }
-            System.out.println("Daily wage => " + dailyWage);
             companyDailyWage.add(dailyWage);
             if (empCheck != 0) {
                 temp = temp + dailyWage;
