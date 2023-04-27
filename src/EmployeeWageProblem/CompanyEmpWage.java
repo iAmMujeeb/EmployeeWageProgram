@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class CompanyEmpWage {
 
     ArrayList<Integer> companyTotalWage = new ArrayList<>();
+    ArrayList<Integer> companyDailyWage = new ArrayList<>();
 
     int totalWage;
     final int WAGE_PER_HOUR = 20;
@@ -34,6 +35,7 @@ public class CompanyEmpWage {
                     System.out.println("Employee is Absent!");
             }
             System.out.println("Daily wage => " + dailyWage);
+            companyDailyWage.add(dailyWage);
             if (empCheck != 0) {
                 temp = temp + dailyWage;
                 totalWage = temp;
@@ -44,8 +46,9 @@ public class CompanyEmpWage {
 
     @Override
     public String toString() {
-        return "Company{" +
+        return "CompanyEmpWage{" +
                 "companyTotalWage=" + companyTotalWage +
+                ", companyDailyWage=" + companyDailyWage +
                 '}';
     }
 }
